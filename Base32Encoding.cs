@@ -90,7 +90,12 @@ namespace OTPProvider
 
             return returnArray;
         }
-
+        /// <summary>
+        /// Base32 기반 무작위 키 생성 메서드
+        /// </summary>
+        /// <param name="size">생성할 키의 길이</param>
+        /// <returns>Bae32 인코딩된 무작위 키</returns>
+        /// <exception cref="ArgumentException">키 크기가 0보다 작을 경우 발생</exception>
         public static string RandomKeyGenerate(int size)
         {
             if (size <= 0)
